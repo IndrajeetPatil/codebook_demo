@@ -67,3 +67,7 @@ df <- rio::import("DarkTriadDate_person.sav")
 # create codebook
 codebook::codebook(df)
 ```
+
+```{r copy}
+# file.copy(from = "codebook.Rmd", to = "README.Rmd")
+```
