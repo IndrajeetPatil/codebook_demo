@@ -1,5 +1,5 @@
 ---
-title: "Codebook - IMDB dataset"
+title: "Codebook - The Dark Triad and attractiveness in speed dating"
 output:
   html_document:
     toc: true
@@ -61,8 +61,9 @@ codebook_data <- detect_scales(codebook_data)
 Create codebook
 
 ```{r codebook}
-# data
-df <- readr::read_csv("movies_long.csv")
+# source: https://osf.io/jvk3u/
+df <- rio::import("DarkTriadDate_person.sav")
 
+# create codebook
 codebook::codebook(df)
 ```
