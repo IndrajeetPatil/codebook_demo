@@ -4,7 +4,7 @@ output:
   html_document:
     toc: true
     toc_depth: 4
-    toc_float: true
+    toc_float: false
     code_folding: 'hide'
     self_contained: true
   pdf_document:
@@ -61,5 +61,8 @@ codebook_data <- detect_scales(codebook_data)
 Create codebook
 
 ```{r codebook}
-codebook::codebook(readr::read_csv("movies_long.csv"))
+# data
+df <- readr::read_csv("movies_long.csv")
+
+codebook::codebook(df)
 ```
